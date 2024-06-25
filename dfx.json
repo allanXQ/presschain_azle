@@ -1,0 +1,39 @@
+{
+  "canisters": {
+    "presschain_azle_backend": {
+      "build": "npx azle presschain_azle_backend",
+      "candid": "src/presschain_azle_backend/presschain_azle_backend.did",
+      "gzip": true,
+      "main": "src/presschain_azle_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "javascript": {},
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/presschain_azle_backend/presschain_azle_backend.wasm"
+    },
+    "presschain_azle_frontend": {
+      "dependencies": [
+        "presschain_azle_backend"
+      ],
+      "source": [
+        "src/presschain_azle_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "presschain_azle_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
