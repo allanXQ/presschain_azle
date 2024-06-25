@@ -18,12 +18,8 @@
       "wasm": ".azle/presschain_azle_backend/presschain_azle_backend.wasm"
     },
     "presschain_azle_frontend": {
-      "dependencies": [
-        "presschain_azle_backend"
-      ],
-      "source": [
-        "src/presschain_azle_frontend/dist"
-      ],
+      "dependencies": ["presschain_azle_backend"],
+      "source": ["src/presschain_azle_frontend/dist"],
       "type": "assets",
       "workspace": "presschain_azle_frontend"
     }
