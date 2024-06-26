@@ -33,15 +33,29 @@ const SubmitArticle = () => {
         component="form"
         noValidate
         onSubmit={handleSubmit}
-        sx={{ display: "flex", flexDirection: "column", gap: 5, mt: 3 }}
+        sx={{
+          display: "flex",
+
+          flexDirection: "column",
+          gap: 5,
+          mt: 3,
+        }}
       >
-        <Grid container spacing={2}>
+        <Grid
+          container
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+
+            gap: 2,
+          }}
+        >
           <Grid
             item
-            xs={12}
-            md={6}
             sx={{
-              height: "500px",
+              width: 550,
+              height: 500,
             }}
           >
             <ReactQuill
@@ -56,10 +70,9 @@ const SubmitArticle = () => {
           </Grid>
           <Grid
             item
-            xs={12}
-            md={6}
             sx={{
-              height: "500px",
+              width: 550,
+              height: 500,
               borderLeft: "1px solid #ccc",
               overflowY: "auto",
               wordWrap: "break-word",
