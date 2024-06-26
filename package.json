@@ -22,11 +22,14 @@
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@reduxjs/toolkit": "^2.2.5",
+    "axios": "^1.7.2",
+    "formik": "^2.4.6",
     "react-redux": "^9.1.2",
     "react-router": "^6.24.0",
     "react-router-dom": "^6.24.0",
     "redux": "^5.0.1",
     "redux-persist": "^6.0.0",
-    "redux-thunk": "^3.1.0"
+    "redux-thunk": "^3.1.0",
+    "yup": "^1.4.0"
   }
 }

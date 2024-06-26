@@ -182,6 +182,7 @@ const Home = () => {
           >
             {Features.map((item) => (
               <Box
+                key={item.title}
                 sx={{
                   display: "flex",
                   flexDirection: "column",
@@ -234,6 +235,7 @@ const Home = () => {
         >
           {stats.map((item) => (
             <Box
+              key={item.title}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -286,6 +288,7 @@ const Home = () => {
         >
           {whyUs.map((item) => (
             <Box
+              key={item.title}
               sx={{
                 display: "flex",
                 flexDirection: "column",

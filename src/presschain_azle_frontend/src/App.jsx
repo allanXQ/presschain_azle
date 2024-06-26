@@ -1,14 +1,18 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import RootLayout from "components/Layouts/RootLayout";
-import Login from "./pages/Auth/login";
-import Logout from "./pages/Auth/logout";
-import Register from "./pages/Auth/register";
-import ForgotPassword from "./pages/Auth/forgotPassword";
-import MessageModal from "./components/messages";
-import HomeLayout from "./components/Layouts/HomeLayout";
-import Profile from "./pages/Profile";
+import Login from "pages/Auth/login";
+import Logout from "pages/Auth/logout";
+import Register from "pages/Auth/register";
+import ForgotPassword from "pages/Auth/forgotPassword";
+import MessageModal from "components/messages";
+import HomeLayout from "components/Layouts/HomeLayout";
+import AboutUs from "pages/Home/Abouts";
+import Terms from "pages/Home/Terms";
+import PrivacyPolicy from "pages/Home/Privacy";
+import Home from "pages/Home";
+// import Profile from "pages/Profile";
 import { ThemeProvider } from "@mui/material";
-import useStyledTheme from "./Hooks/useStyledTheme";
+import useStyledTheme from "Hooks/useStyledTheme";
 
 function App() {
   const theme = useStyledTheme();
@@ -19,18 +23,18 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route element={<HomeLayout />}>
           <Route path="home" element={<Home />} />
-          {/* <Route path="about" element={<AboutUs />} />
+          <Route path="about" element={<AboutUs />} />
           <Route path="terms" element={<Terms />} />
           <Route path="privacy" element={<PrivacyPolicy />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-          <Route path="forgot-password" element={<ForgotPassword />} /> */}
+          <Route path="forgot-password" element={<ForgotPassword />} />
         </Route>
 
-        {/* <Route path="logout" element={<Logout />} />
+        <Route path="logout" element={<Logout />} />
         <Route element={<RootLayout />}>
-          <Route path="profile" element={<Profile />} />
-        </Route> */}
+          {/* <Route path="profile" element={<Profile />} /> */}
+        </Route>
       </Routes>
     </ThemeProvider>
   );
