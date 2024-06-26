@@ -21,13 +21,6 @@ const registerModel = {
       required: true,
     },
     {
-      name: "phone",
-      type: "number",
-      label: "Phone",
-      placeholder: "2547...",
-      required: true,
-    },
-    {
       name: "password",
       type: "password",
       label: "Password",

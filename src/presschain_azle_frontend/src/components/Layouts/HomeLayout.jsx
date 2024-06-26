@@ -61,7 +61,7 @@ function DrawerAppBar(props) {
       }}
     >
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        PEERCHAIN
       </Typography>
       <Divider />
       <List
@@ -166,7 +166,7 @@ function DrawerAppBar(props) {
             variant="h6"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            MUI
+            PEERCHAIN
           </Typography>
           <Box
             sx={{
