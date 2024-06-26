@@ -1,30 +1,38 @@
-import { useState } from "react";
-import { presschain_azle_backend } from "declarations/presschain_azle_backend";
+import { Navigate, Route, Routes } from "react-router-dom";
+import RootLayout from "components/Layouts/RootLayout";
+import Login from "./pages/Auth/login";
+import Logout from "./pages/Auth/logout";
+import Register from "./pages/Auth/register";
+import ForgotPassword from "./pages/Auth/forgotPassword";
+import MessageModal from "./components/messages";
+import HomeLayout from "./components/Layouts/HomeLayout";
+import Profile from "./pages/Profile";
+import { ThemeProvider } from "@mui/material";
+import useStyledTheme from "./Hooks/useStyledTheme";
 
 function App() {
-  const [greeting, setGreeting] = useState("");
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    presschain_azle_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
-    });
-    return false;
-  }
-
+  const theme = useStyledTheme();
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your namer: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
+    <ThemeProvider theme={theme}>
+      <MessageModal />
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route element={<HomeLayout />}>
+          <Route path="home" element={<Home />} />
+          {/* <Route path="about" element={<AboutUs />} />
+          <Route path="terms" element={<Terms />} />
+          <Route path="privacy" element={<PrivacyPolicy />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="forgot-password" element={<ForgotPassword />} /> */}
+        </Route>
+
+        {/* <Route path="logout" element={<Logout />} />
+        <Route element={<RootLayout />}>
+          <Route path="profile" element={<Profile />} />
+        </Route> */}
+      </Routes>
+    </ThemeProvider>
   );
 }
 

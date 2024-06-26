@@ -15,5 +15,16 @@
   "workspaces": [
     "src/presschain_azle_backend",
     "src/presschain_azle_frontend"
-  ]
+  ],
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.20",
+    "react-redux": "^9.1.2",
+    "react-router": "^6.24.0",
+    "react-router-dom": "^6.24.0",
+    "redux": "^5.0.1",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^3.1.0"
+  }
 }
