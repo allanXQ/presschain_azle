@@ -1,0 +1,27 @@
+/* styles.css */
+.ql-editor h1,
+.review-content h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+.ql-editor h2,
+.review-content h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.ql-editor p,
+.review-content p {
+  font-size: 1em;
+}
+.ql-editor .ql-bold,
+.review-content .bold {
+  font-weight: bold;
+}
+.ql-editor .ql-italic,
+.review-content .italic {
+  font-style: italic;
+}
+.ql-editor .ql-underline,
+.review-content .underline {
+  text-decoration: underline;
+}

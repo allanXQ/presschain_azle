@@ -14,29 +14,26 @@ const RootLayout = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const path = location.pathname;
-  const isTrade = path.includes("trade/spot");
-  isTrade ? (drawerWidth = "0px") : (drawerWidth = drawerWidth);
 
-  const excludedPaths = ["trade", "transact"];
   const currentPath = useLocation().pathname;
-  useEffect(() => {
-    if (isLoggedIn) {
-      if (excludedPaths.some((path) => currentPath.includes(path))) return;
+  // useEffect(() => {
+  //   if (isLoggedIn) {
+  //     if (excludedPaths.some((path) => currentPath.includes(path))) return;
 
-      dispatch(
-        apiCall({
-          endpoint: "user/user-info",
-          method: "post",
-          data: {
-            userId: user.userId,
-          },
-          slice: "userData",
-        })
-      );
-    } else {
-      navigate("login");
-    }
-  }, [currentPath, isLoggedIn]);
+  //     dispatch(
+  //       apiCall({
+  //         endpoint: "user/user-info",
+  //         method: "post",
+  //         data: {
+  //           userId: user.userId,
+  //         },
+  //         slice: "userData",
+  //       })
+  //     );
+  //   } else {
+  //     navigate("login");
+  //   }
+  // }, [currentPath, isLoggedIn]);
 
   return (
     <ResponsiveDrawer>
