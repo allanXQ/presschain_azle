@@ -81,86 +81,32 @@ function ResponsiveDrawer(props) {
       path: "/profile",
     },
     {
-      name: "Transact",
-      icon: <PointOfSale sx={iconColor} />,
-      submenu: [
-        {
-          name: "Deposit",
-          icon: <AccountBalance sx={iconColor} />,
-          path: "/transact/deposit",
-        },
-        {
-          name: "Withdraw",
-          icon: <Redeem sx={iconColor} />,
-          path: "/transact/withdraw",
-        },
-        {
-          name: "Request Loan",
-          icon: <RequestQuote sx={iconColor} />,
-          path: "/transact/request-loan",
-        },
-        {
-          name: "Pay Loan",
-          icon: <Payment sx={iconColor} />,
-          path: "/transact/pay-loan",
-        },
-      ],
-    },
-    {
-      name: "Trade",
-      icon: <ShowChart sx={iconColor} />,
-      submenu: [
-        {
-          name: "Spot",
-          icon: <AccountBalance sx={iconColor} />,
-          path: "/trade/spot",
-        },
-        {
-          name: "P2P",
-          icon: <Redeem sx={iconColor} />,
-          path: "/trade/p2p",
-        },
-        {
-          name: "Swap",
-          icon: <Redeem sx={iconColor} />,
-          path: "/trade/swap",
-        },
-      ],
-    },
-    {
-      name: "Loan Calculator",
-      icon: <Calculate sx={iconColor} />,
-      path: "/loan-calculator",
-    },
-    {
-      name: "Conversations",
-      icon: <Chat sx={iconColor} />,
-      path: "/Conversations",
-      badge: 4,
-    },
-    {
-      name: "History",
+      name: "Articles",
       icon: <History sx={iconColor} />,
       submenu: [
         {
-          name: "Deposits",
+          name: "Create",
           icon: <Receipt sx={iconColor} />,
-          path: "/history/deposits",
+          path: "/articles/create",
         },
         {
-          name: "Withdrawals",
+          name: "View",
           icon: <Receipt sx={iconColor} />,
-          path: "/history/withdrawals",
+          path: "/articles/view",
+        },
+      ],
+    },
+    {
+      name: "Review",
+      icon: <History sx={iconColor} />,
+      submenu: [
+        {
+          name: "Create",
+          icon: <Receipt sx={iconColor} />,
         },
         {
-          name: "Spot Trades",
-          icon: <RequestPage sx={iconColor} />,
-          path: "/history/spot",
-        },
-        {
-          name: "P2P Trades",
+          name: "View",
           icon: <Receipt sx={iconColor} />,
-          path: "/history/p2p",
         },
       ],
     },
@@ -240,16 +186,12 @@ function ResponsiveDrawer(props) {
       path: "/dashboard",
     },
     {
-      name: "Deposit",
-      path: "/deposit",
+      name: "Articles",
+      path: "/articles",
     },
     {
-      name: "Trade",
-      path: "/trade",
-    },
-    {
-      name: "Loan Request",
-      path: "/loan-request",
+      name: "Reviews",
+      path: "/reviews",
     },
   ];
 

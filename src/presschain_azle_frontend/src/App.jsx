@@ -10,7 +10,7 @@ import AboutUs from "pages/Home/Abouts";
 import Terms from "pages/Home/Terms";
 import PrivacyPolicy from "pages/Home/Privacy";
 import Home from "pages/Home";
-// import Profile from "pages/Profile";
+import Profile from "pages/User/profile";
 import { ThemeProvider } from "@mui/material";
 import useStyledTheme from "Hooks/useStyledTheme";
 
@@ -33,7 +33,7 @@ function App() {
 
         <Route path="logout" element={<Logout />} />
         <Route element={<RootLayout />}>
-          {/* <Route path="profile" element={<Profile />} /> */}
+          <Route path="profile" element={<Profile />} />
         </Route>
       </Routes>
     </ThemeProvider>
