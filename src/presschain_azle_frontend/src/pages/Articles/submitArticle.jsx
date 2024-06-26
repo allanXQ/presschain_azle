@@ -29,7 +29,12 @@ const SubmitArticle = () => {
       >
         Submit Article
       </Typography>
-      <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+      <Box
+        component="form"
+        noValidate
+        onSubmit={handleSubmit}
+        sx={{ display: "flex", flexDirection: "column", gap: 5, mt: 3 }}
+      >
         <Grid container spacing={2}>
           <Grid
             item
