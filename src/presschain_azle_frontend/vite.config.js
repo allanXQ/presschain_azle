@@ -7,7 +7,6 @@ import dotenv from "dotenv";
 dotenv.config({ path: "../../.env" });
 
 export default defineConfig({
-  base: "/src/",
   build: {
     emptyOutDir: true,
   },
@@ -36,6 +35,28 @@ export default defineConfig({
       {
         find: "declarations",
         replacement: fileURLToPath(new URL("../declarations", import.meta.url)),
+      },
+      {
+        find: "components",
+        replacement: fileURLToPath(
+          new URL("./src/components", import.meta.url)
+        ),
+      },
+      {
+        find: "Redux",
+        replacement: fileURLToPath(new URL("./src/redux", import.meta.url)),
+      },
+      {
+        find: "Hooks",
+        replacement: fileURLToPath(new URL("./src/Hooks", import.meta.url)),
+      },
+      {
+        find: "pages",
+        replacement: fileURLToPath(new URL("./src/pages", import.meta.url)),
+      },
+      {
+        find: "utils",
+        replacement: fileURLToPath(new URL("./src/utils", import.meta.url)),
       },
     ],
   },

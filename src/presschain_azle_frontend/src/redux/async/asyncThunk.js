@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { reportError } from "redux/features/app/error";
+import { reportError } from "Redux/features/app/error";
 import axiosInstance from "utils/axiosInstance";
 
 export const apiCall = createAsyncThunk(

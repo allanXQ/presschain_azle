@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import {
   selectIsLoggedIn,
   selectIsRegistered,
-} from "redux/features/user/userSlice";
+} from "Redux/features/user/userSlice";
 import Auth from "./auth";
 
 const Register = () => {

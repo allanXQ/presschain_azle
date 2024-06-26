@@ -2,7 +2,7 @@ import useUserData from "Hooks/useUserData";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
-import { loginFailed, loginSuccess } from "redux/features/user/userSlice";
+import { loginFailed, loginSuccess } from "Redux/features/user/userSlice";
 
 const GoogleCallback = () => {
   const dispatch = useDispatch();

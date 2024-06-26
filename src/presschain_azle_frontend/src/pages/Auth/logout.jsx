@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectIsLoggedIn } from "redux/features/user/userSlice";
+import { selectIsLoggedIn } from "Redux/features/user/userSlice";
 import { useNavigate } from "react-router-dom";
-import { apiCall } from "redux/async/asyncThunk";
+import { apiCall } from "Redux/async/asyncThunk";
 import useUserData from "Hooks/useUserData";
 
 const Logout = () => {

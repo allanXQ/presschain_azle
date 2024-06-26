@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import ResponsiveDrawer from "../Navigation/Navbar";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { selectIsLoggedIn, selectUser } from "redux/features/user/userSlice";
-import { selectDrawerWidth } from "redux/features/app/configSlice";
-import { apiCall } from "redux/async/asyncThunk";
+import { selectIsLoggedIn, selectUser } from "Redux/features/user/userSlice";
+import { selectDrawerWidth } from "Redux/features/app/configSlice";
+import { apiCall } from "Redux/async/asyncThunk";
 
 const RootLayout = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);

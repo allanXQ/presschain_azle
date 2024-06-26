@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectUser } from "redux/features/user/userSlice";
+import { selectUser } from "Redux/features/user/userSlice";
 
 const useUserData = () => {
   const user = useSelector(selectUser);

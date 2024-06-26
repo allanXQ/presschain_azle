@@ -39,7 +39,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { selectTheme } from "redux/features/app/configSlice";
+import { selectTheme } from "Redux/features/app/configSlice";
 import { ThemeButton } from "components/common/Button";
 import { useTheme } from "@emotion/react";
 

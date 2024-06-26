@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { clearError, selectError } from "redux/features/app/error";
+import { clearError, selectError } from "Redux/features/app/error";
 
 const { Snackbar, Alert } = require("@mui/material");
 const { useSelector, useDispatch } = require("react-redux");

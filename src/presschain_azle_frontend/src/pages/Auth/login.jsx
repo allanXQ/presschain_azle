@@ -3,7 +3,7 @@ import LoginForm from "components/forms/models/login";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { selectIsLoggedIn } from "redux/features/user/userSlice";
+import { selectIsLoggedIn } from "Redux/features/user/userSlice";
 import Auth from "./auth";
 
 const Login = () => {
