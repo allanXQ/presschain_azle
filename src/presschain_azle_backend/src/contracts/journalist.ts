@@ -1,27 +1,18 @@
-import { Canister, query, update } from "azle";
+// /backend/contracts/journalist.ts
+import { update, text, bool } from "azle";
 
-interface Journalist {
-  id: string;
-  name: string;
+type Journalist = {
   email: string;
-  registeredAt: bigint;
+};
+
+let journalists: Journalist[] = [];
+
+export function registerJournalist(email: string): bool {
+  if (journalists.find((journalist) => journalist.email === email)) {
+    console.error(`Journalist with email ${email} is already registered.`);
+    return false;
+  }
+  journalists.push({ email });
+  console.log(`Registered journalist with email: ${email}`);
+  return true;
 }
-
-export default Canister({
-  journalists: [] as Journalist[],
-
-  registerJournalist: update((name: string, email: string) => {
-    const newJournalist: Journalist = {
-      id: `j-${this.journalists.length + 1}`,
-      name,
-      email,
-      registeredAt: BigInt(Date.now()),
-    };
-    this.journalists.push(newJournalist);
-    return newJournalist;
-  }),
-
-  getJournalists: query(() => {
-    return this.journalists;
-  }),
-});
