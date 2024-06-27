@@ -5,5 +5,5 @@ export default Canister({
   greet: query([text], text, (name) => {
     return `Hello, ${name}!`;
   }),
-  registerJournalist: update([text], bool, registerJournalist),
+  registerJournalist: update([text, text], bool, registerJournalist),
 });
