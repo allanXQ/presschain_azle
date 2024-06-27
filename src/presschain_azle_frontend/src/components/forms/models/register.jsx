@@ -2,9 +2,7 @@ import CreateForm from "../utils/createForm";
 
 const registerModel = {
   name: "Sign Up",
-  endpoint: "auth/register",
-  method: "post",
-
+  operation: "registerJournalist",
   fields: [
     {
       name: "username",
@@ -25,13 +23,6 @@ const registerModel = {
       type: "password",
       label: "Password",
       placeholder: "Enter your password",
-      required: true,
-    },
-    {
-      name: "confirmPassword",
-      type: "password",
-      label: "Confirm Password",
-      placeholder: "Confirm your password",
       required: true,
     },
   ],

@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { apiCall } from "Redux/async/asyncThunk";
 import { MuiButton } from "components/common/Button";
 import { selectUser } from "Redux/features/user/userSlice";
-import { presschain_backend } from "declarations/presschain_backend";
+import { presschain_azle_backend } from "declarations/presschain_azle_backend";
 
 const CenteredBox = (props) => (
   <Box
@@ -48,16 +48,24 @@ const CreateForm = (formName, model, children, activeAsset) => {
         initialValues={getInitialValues(fields)}
         validationSchema={getValidationSchema(fields)}
         onSubmit={(values, { setSubmitting }) => {
-          values.userId = user.userId;
-          dispatch(
-            apiCall({
-              endpoint: model.endpoint,
-              method: model.method,
-              data: values,
-              slice: "userData",
-            })
-          );
-          setSubmitting(false);
+          setSubmitting(true);
+          const operation = model.operation;
+          const backendMethod = presschain_azle_backend[operation];
+          console.log(backendMethod);
+          if (backendMethod) {
+            backendMethod(values)
+              .then((response) => {
+                alert("Operation successful!");
+                setSubmitting(false);
+              })
+              .catch((error) => {
+                alert(`Operation failed: ${error.toString()}`);
+                setSubmitting(false);
+              });
+          } else {
+            alert(`Operation method ${model.operation} not found on backend.`);
+            setSubmitting(false);
+          }
         }}
         style={{
           display: "flex",

@@ -4,26 +4,12 @@ const initialState = {
   isLoggedIn: false,
   status: "idle",
   error: null,
-  userId: null,
-  username: null,
-  googleName: null,
-  firstName: null,
-  lastName: null,
-  image: null,
-  email: null,
-  phone: null,
-  balance: 0,
-  portfolio: [],
-  trades: [],
-  deposits: [],
-  withdrawals: [],
-  transfers: [],
-  spotOrders: [],
-  p2pOrders: [],
-  loanRequests: [],
-  loanRepayments: [],
-  swapOrders: [],
-  referrals: [],
+  username: "",
+  email: "",
+  type: "",
+  isReviewer: "",
+  articles: [],
+  reviews: [],
 };
 export const userSlice = createSlice({
   name: "userData",
@@ -63,14 +49,6 @@ export const userSlice = createSlice({
               Object.keys(action.payload.data.user).forEach((key) => {
                 state[key] = action.payload.data.user[key];
               });
-              break;
-            //to be updated
-            case "user/transact/withdraw":
-            case "user/transact/mpesa/deposit":
-            case "user/transact/transfer":
-              break;
-            case "user/trade/spot/buy-limit":
-            case "user/trade/spot/sell-limit":
               break;
             default:
               break;
