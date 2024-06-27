@@ -14,6 +14,8 @@ import Profile from "pages/User/profile";
 import { ThemeProvider } from "@mui/material";
 import useStyledTheme from "Hooks/useStyledTheme";
 import SubmitArticle from "./pages/Articles/submitArticle";
+import ViewArticle from "./pages/Articles/viewArticle";
+import ArticlesGrid from "./pages/Articles/articlesGrid";
 
 function App() {
   const theme = useStyledTheme();
@@ -36,6 +38,7 @@ function App() {
         <Route element={<RootLayout />}>
           <Route path="profile" element={<Profile />} />
           <Route path="articles/create" element={<SubmitArticle />} />
+          <Route path="articles/view" element={<ArticlesGrid />} />
         </Route>
       </Routes>
     </ThemeProvider>

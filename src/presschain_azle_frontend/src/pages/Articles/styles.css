@@ -25,3 +25,11 @@
 .review-content .underline {
   text-decoration: underline;
 }
+
+.review-content img,
+.ql-editor img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
