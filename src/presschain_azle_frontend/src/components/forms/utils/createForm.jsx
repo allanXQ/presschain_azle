@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { apiCall } from "Redux/async/asyncThunk";
 import { MuiButton } from "components/common/Button";
 import { selectUser } from "Redux/features/user/userSlice";
+import { presschain_backend } from "declarations/presschain_backend";
 
 const CenteredBox = (props) => (
   <Box
