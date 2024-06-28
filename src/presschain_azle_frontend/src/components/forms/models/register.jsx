@@ -5,13 +5,6 @@ const registerModel = {
   operation: "registerJournalist",
   fields: [
     {
-      name: "username",
-      type: "text",
-      label: "Username",
-      placeholder: "Enter your username",
-      required: true,
-    },
-    {
       name: "email",
       type: "email",
       label: "Email",
