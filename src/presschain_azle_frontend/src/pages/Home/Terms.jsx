@@ -15,16 +15,16 @@ const termsAndConditions = [
       {
         subtitle: "Interpretation",
         description:
-          "The words of which the initial letter is capitalized have meanings defined under the following conditions.",
+          "Words capitalized in these Terms have defined meanings under the conditions set forth below.",
       },
       {
         subtitle: "Definitions",
         description: "For the purposes of these Terms and Conditions:",
         list: [
-          `"Affiliate" means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest, or other securities entitled to vote for the election of directors or other managing authority.`,
-          `"Service" refers to the platform.`,
-          `"Terms and Conditions" (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and Verdant Capital regarding the use of the Service.`,
-          `"User" or "You" refers to the inBoxidual accessing or using the Service, or the company, or other legal entity on behalf of which such inBoxidual is accessing or using the Service, as applicable.`,
+          `"Affiliate" refers to an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of more than 50% of the voting securities or other ownership interests.`,
+          `"Platform" denotes the PressChain service.`,
+          `"Terms and Conditions", also known as "Terms", constitute the entire agreement between you and PressChain concerning the use of the Service.`,
+          `"User" or "You" means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.`,
         ],
       },
     ],
@@ -32,44 +32,44 @@ const termsAndConditions = [
   {
     title: "Acknowledgment",
     description:
-      "By accessing or using the Service, You agree to be bound by these Terms and Conditions.",
+      "By accessing or using the Service, you acknowledge that you are bound by these Terms and Conditions.",
   },
   {
     title: "User Accounts",
     list: [
-      "You must create an account to use our Service.",
-      "You agree to keep your password confidential.",
+      "You are required to register an account to access certain features of the Service.",
+      "You are responsible for maintaining the confidentiality of your account and password.",
     ],
   },
   {
     title: "Termination",
     description:
-      "We may terminate or suspend Your Account immediately, without prior notice, for any reason, including, without limitation, if You breach the Terms.",
+      "PressChain may terminate or suspend your account immediately, without prior notice, if you breach these Terms.",
   },
   {
     title: "Limitation of Liability",
     description:
-      "To the maximum extent permitted by applicable law, Verdant Capital shall not be liable for any indirect, punitive, incidental, special, consequential, or exemplary damages.",
+      "PressChain shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.",
   },
   {
     title: "Governing Law",
     description:
-      "The laws of Kenya, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service.",
+      "These Terms shall be governed and construed in accordance with the laws of the location of PressChain’s headquarters, excluding its conflicts of law rules.",
   },
   {
     title: "Dispute Resolution",
     description:
-      "Any disputes arising out of or relating to the Agreement, the breach thereof, or any use of the Platform (including commercial transactions conducted through the Platform) (“Disputes”) shall be submitted to confidential arbitration.",
+      "Disputes arising from or related to these Terms or the Service shall be resolved through binding arbitration in accordance with the rules of PressChain’s location.",
   },
   {
     title: "Changes to These Terms and Conditions",
     description:
-      "We reserve the right, at Our sole discretion, to modify or replace these Terms at any time.",
+      "PressChain reserves the right to modify or replace these Terms at any time, at our sole discretion.",
   },
   {
     title: "Contact Us",
     description:
-      "If you have any questions about these Terms and Conditions, You can contact us.",
+      "If you have any questions about these Terms and Conditions, please contact us at support@presschain.com.",
   },
 ];
 
@@ -89,38 +89,29 @@ const Terms = () => {
           <Typography variant="h5" gutterBottom>
             {term.title}
           </Typography>
-          {
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              {term.list && (
-                <List>
-                  {term.list.map((listItem, listIndex) => (
-                    <ListItem key={listIndex}>
-                      <ListItemText primary={listItem} />
-                    </ListItem>
-                  ))}
-                </List>
-              )}
-            </Box>
-          }
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            {term.list && (
+              <List>
+                {term.list.map((listItem, listIndex) => (
+                  <ListItem key={listIndex}>
+                    <ListItemText primary={listItem} />
+                  </ListItem>
+                ))}
+              </List>
+            )}
+          </Box>
           {term.content ? (
             term.content.map((contentItem, contentIndex) => (
               <Box key={contentIndex} mt={2}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <Typography variant="h6">{contentItem.subtitle}</Typography>
-                  <Typography variant="bodyRegular">
-                    {contentItem.description}
-                  </Typography>
-                </Box>
+                <Typography variant="h6">{contentItem.subtitle}</Typography>
+                <Typography variant="bodyRegular">
+                  {contentItem.description}
+                </Typography>
                 {contentItem.list && (
                   <List>
                     {contentItem.list.map((listItem, listIndex) => (

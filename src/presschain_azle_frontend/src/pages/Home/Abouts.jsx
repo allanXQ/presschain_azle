@@ -5,27 +5,27 @@ const AboutUs = () => {
   const content = [
     {
       title: "Who We Are",
-      subtitle: "Beyond Just Trading: We're a Movement",
+      subtitle: "Redefining Journalism through Decentralization",
       description:
-        "At Verdant Capital, we represent more than just a digital platform; we signify a transformative shift in the OTC trading sphere. Established with a clear vision to reshape and streamline the complexities of over-the-counter trading, we harmoniously fuse cutting-edge technology with an empathetic understanding of our users' needs. As we continue to grow, we are proud to shine a light on the intricate world of OTC trading, guiding traders from all corners of the globe towards informed decisions and brighter financial futures.",
+        "PressChain stands at the forefront of a new era in journalism. We're not just a news outlet; we are a decentralized platform that champions transparency and freedom of expression. By leveraging blockchain technology, PressChain empowers contributors around the globe to share and verify news, ensuring authenticity and combating misinformation. Our mission is to make news accessible to all, free from the influence of centralized power.",
       imagePath: "/img/aboutus.jpeg",
       width: 2000,
     },
     {
       title: "Our Team",
-      subtitle: "Passionate Professionals at Your Service",
+      subtitle: "Innovators Committed to Truth",
       imagePath: "/img/team.jpeg",
       width: 2000,
       description:
-        "We're more than just a team; we're a close-knit community of dedicated professionals. Comprising passionate traders with years of experience, innovative developers at the forefront of technological advancements, and committed customer success specialists, we are united by a common goal: to support and guide our users. At the heart of our mission is ensuring you have the necessary resources, tools, and knowledge to achieve your financial aspirations. With each feature we develop, every support ticket we resolve, and every piece of market insight we share, our primary aim is to pave the path for your trading success.",
+        "Our team is a diverse group of passionate journalists, blockchain experts, and advocates for press freedom. United by a shared vision of ethical journalism, we work tirelessly to provide a platform where every voice can be heard. From our tech innovators who ensure the robustness of our platform to our editorial staff upholding the highest journalistic standards, each member plays a crucial role in the integrity of PressChain.",
     },
     {
       title: "Our Journey",
-      subtitle: "From Passion Project to Global Impact",
+      subtitle: "Empowering Voices Globally",
       imagePath: "/img/journey.jpeg",
       width: 2000,
       description:
-        "Initiated in the year 2000 under the visionary leadership of Christian Bale, Verdant Capital emerged from a spark of passion and innovation. As we journey through time, our platform boasts of an ever-expanding user base spanning across 100 countries, a testament to our innovative spirit, unwavering commitment, and the deep-rooted trust we've cultivated within our community. Be it the meticulous market analyses at the break of dawn or the tireless coding endeavors deep into the night, every nuance of Verdant Capital epitomizes our relentless pursuit of excellence.",
+        "Launched in the wake of growing censorship and media monopolization, PressChain was founded to restore power to the public. What began as a grassroots initiative has blossomed into a global movement, with millions of active users across continents. Each story published on PressChain not only informs but also fosters a participatory culture of journalism, where truth prevails and stories matter.",
     },
   ];
 
@@ -35,21 +35,21 @@ const AboutUs = () => {
       imagePath: "/img/mission.png",
       color: "#f14724",
       description:
-        "Empowering traders with essential tools and insights for confident OTC market navigation.",
+        "To ensure the free flow of information by providing a decentralized platform where news is created, shared, and verified by the global community, fostering a world where media integrity and independence are paramount.",
     },
     {
       title: "Vision",
       imagePath: "/img/vision.png",
       color: "#00a875",
       description:
-        "Aiming to be the top OTC platform, ensuring trader success and confidence.",
+        "To set the global standard for participatory journalism, where every individual has the power to report, document, and influence the world through unfiltered news.",
     },
     {
       title: "Values",
       imagePath: "/img/values.png",
       color: "#0aafdc",
       description:
-        "Championing community, technology, knowledge, transparency, and collaboration.",
+        "Our core values are rooted in transparency, collaboration, and integrity. We believe in empowering individuals, protecting freedom of speech, and promoting ethical journalism practices across our decentralized network.",
     },
   ];
 

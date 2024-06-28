@@ -3,13 +3,9 @@ import { Typography, Container, Box } from "@mui/material";
 
 const PrivacyPolicy = () => {
   return (
-    <Container
-      sx={{
-        mt: 10,
-      }}
-    >
+    <Container sx={{ mt: 10 }}>
       <Typography variant="h4" gutterBottom>
-        Privacy Policy for Verdant Capital
+        Privacy Policy for PressChain
       </Typography>
 
       <Typography variant="bodyRegular" paragraph>
@@ -19,74 +15,74 @@ const PrivacyPolicy = () => {
       <Box my={3}>
         <Typography variant="h6">Introduction</Typography>
         <Typography variant="bodyRegular" paragraph>
-          At Verdant Capital, we are committed to protecting the privacy of our
-          users. This Privacy Policy outlines the types of information we
-          collect, how we use it, and the measures we take to safeguard it.
+          At PressChain, your privacy is paramount. This document details our
+          commitments and practices concerning the protection and use of your
+          personal information.
         </Typography>
       </Box>
 
       <Box my={3}>
         <Typography variant="h6">Data Collection</Typography>
         <Typography variant="bodyRegular" paragraph>
-          We collect two types of information:
+          We collect essential information to enhance our services:
         </Typography>
         <Typography variant="bodyRegular" paragraph>
-          1. Personal Information: This includes details such as your name,
-          email address, and phone number.
+          1. Identifiable Information: Information such as your username,
+          contact details, and other personal identifiers.
         </Typography>
         <Typography variant="bodyRegular" paragraph>
-          2. Non-Personal Information: Data about your device, browser, and
-          interactions with our platform.
+          2. Interaction Data: Data regarding your interactions with our
+          services that helps us tailor and optimize your experience.
         </Typography>
       </Box>
 
       <Box my={3}>
         <Typography variant="h6">Data Use</Typography>
         <Typography variant="bodyRegular" paragraph>
-          We use the data we collect to:
+          The information we collect is utilized in the following ways:
         </Typography>
         <Typography variant="bodyRegular" paragraph>
-          1. Improve our platform's functionality and user experience.
+          1. To enhance the functionality and security of our platform.
         </Typography>
         <Typography variant="bodyRegular" paragraph>
-          2. Respond to user queries and support requests.
+          2. To address and respond to service or support requests from you.
         </Typography>
         <Typography variant="bodyRegular" paragraph>
-          3. Send users relevant updates and promotional material (with user
-          consent).
+          3. To communicate pertinent updates and offers to you, subject to your
+          consent.
         </Typography>
       </Box>
 
       <Box my={3}>
         <Typography variant="h6">Data Sharing and Third Parties</Typography>
         <Typography variant="bodyRegular" paragraph>
-          We do not sell or rent user data. We may share data with third-party
-          service providers that aid our operations, but they are bound by
-          confidentiality agreements.
+          We commit to not selling your data. Information may be shared with
+          trusted partners under strict confidentiality agreements to facilitate
+          better service delivery.
         </Typography>
       </Box>
 
       <Box my={3}>
         <Typography variant="h6">User Rights</Typography>
         <Typography variant="bodyRegular" paragraph>
-          Users can request access to their data, ask for corrections, or
-          request data deletion by contacting us.
+          You retain the right to access, amend, or delete your personal data
+          collected by us, under the guidelines of our operational protocols.
         </Typography>
       </Box>
 
       <Box my={3}>
         <Typography variant="h6">Changes to This Policy</Typography>
         <Typography variant="bodyRegular" paragraph>
-          We may update our Privacy Policy from time to time. We will notify
-          users of any significant changes.
+          Updates to this policy will be posted and communicated through our
+          platform, ensuring you remain informed of any changes.
         </Typography>
       </Box>
 
       <Box my={3}>
         <Typography variant="h6">Contact Us</Typography>
         <Typography variant="bodyRegular" paragraph>
-          If you have any questions about this Privacy Policy, you can contact
-          us at: privacy@verdantcapital.com
+          For inquiries regarding our privacy practices, reach out at:
+          privacy@presschain.com
         </Typography>
       </Box>
     </Container>

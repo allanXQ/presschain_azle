@@ -4,71 +4,75 @@ import Footer from "./Footer";
 
 const Features = [
   {
-    title: "Live Trading Room",
+    title: "Real-Time Reporting",
     description:
-      "Experience our collaborative trading rooms where users can share insights, discuss market trends, and strategize in real-time. It's more than just trading; it's about joining a community of like-minded traders.",
+      "Participate in live reporting sessions where journalists and contributors collaborate in real-time, bringing transparency and immediacy to the forefront of news delivery.",
   },
   {
-    title: "Advanced Charting Tools",
+    title: "Advanced Analytical Tools",
     description:
-      "Utilize our top-tier analytical tools designed for both novice and expert traders. Dive deep into comprehensive market analysis, study patterns, and make informed decisions with precision.",
+      "Harness cutting-edge tools for data analysis and visualization, enabling detailed scrutiny and interpretation of news before it's published on our decentralized platform.",
   },
   {
-    title: "Portfolio Management",
+    title: "Comprehensive Portfolio Management",
     description:
-      "Maintain full control and visibility over your investments with our intuitive portfolio management feature. Monitor your assets, track performance, and adjust strategies seamlessly.",
+      "Manage your contributions, track engagement, and analyze your impact within the ecosystem, all through a user-friendly dashboard designed for journalists and contributors.",
   },
   {
-    title: "Market Data",
+    title: "Up-to-Date Market Insights",
     description:
-      "Stay ahead of the curve with real-time market data and insights. Our platform ensures you're always equipped with the latest information, helping you make timely and strategic trading decisions.",
+      "Gain access to the latest developments and trends across various industries and regions, ensuring that you are always informed and ahead of the curve.",
   },
   {
-    title: "Research Tools",
+    title: "In-depth Research Resources",
     description:
-      "Enhance your market understanding with access to a diverse range of research tools and insights. From in-depth reports to expert analysis, we've got you covered on all fronts.",
+      "Utilize our extensive library of resources and research materials to deepen your understanding of complex topics and enhance your journalistic accuracy.",
   },
 ];
 
 const stats = [
   {
     title: "100M",
-    subtitle: "Quarterly volume traded",
+    subtitle: "Articles Published",
   },
   {
-    title: "100K",
-    subtitle: "Users",
+    title: "200K",
+    subtitle: "Active Contributors",
   },
   {
-    title: "500M",
-    subtitle: "Assets on the platform",
+    title: "300+",
+    subtitle: "Countries Reached",
   },
   {
-    title: "100+",
-    subtitle: "COuntries Supported",
+    title: "100%",
+    subtitle: "Community Driven",
   },
 ];
 
 const whyUs = [
   {
     iconPath: "/img/marketdata.png",
-    title: "Tailored Market Insights",
-    description: "Curated OTC trends tailored to your trading style.",
+    title: "Tailored Insights",
+    description:
+      "Get customized insights and data relevant to your interests and reporting needs.",
   },
   {
     iconPath: "/img/security.png",
-    title: "Cutting-Edge Security",
-    description: "Multi-layered protocols to ensure utmost safety.",
+    title: "Enhanced Security",
+    description:
+      "Experience a secure environment with advanced protocols to protect your work and identity.",
   },
   {
     iconPath: "/img/24hrs.png",
-    title: "24/7 Trading Ecosystem",
-    description: "Uninterrupted access for round-the-clock trading.",
+    title: "24/7 Access",
+    description:
+      "Enjoy uninterrupted access to our platform, allowing you to report and publish anytime.",
   },
   {
     iconPath: "/img/support.png",
-    title: "World-Class Support",
-    description: "Dedicated experts for personalized assistance.",
+    title: "Dedicated Support",
+    description:
+      "Rely on our expert team for technical and editorial support to enhance your reporting.",
   },
 ];
 
@@ -102,14 +106,12 @@ const Home = () => {
           }}
         >
           <Typography variant="h2">
-            Your Vision. Our Platform. OTC Perfected.
+            Elevate Your Reporting. Transform the Media Landscape.
           </Typography>
           <Typography variant="bodyRegular">
-            Dive deep into the intricate and lucrative world of over-the-counter
-            (OTC) stocks with Verdant Capital. As your steadfast and
-            knowledgeable partner, we offer unparalleled guidance, tools, and
-            insights, empowering you to navigate the ever-evolving landscape of
-            the OTC markets with ease, confidence, and sophistication.
+            Explore the frontier of decentralized journalism with PressChain.
+            Our platform equips you with the necessary tools and insights,
+            enabling you to craft stories that matter and drive change.
           </Typography>
           <Box>
             <MuiButton
@@ -147,12 +149,10 @@ const Home = () => {
             gap: theme.spacing(1),
           }}
         >
-          <Typography variant="h2">
-            Jumpstart your OTC portfolio today
-          </Typography>
+          <Typography variant="h2">Platform Features</Typography>
           <Typography variant="bodyRegular">
-            Verdant Capital has a variety of features that make it the best
-            place to start trading
+            Discover the powerful features that make PressChain the go-to
+            platform for journalists and contributors worldwide.
           </Typography>
         </Box>
         <Box
