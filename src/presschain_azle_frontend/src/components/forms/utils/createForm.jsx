@@ -50,8 +50,8 @@ const CreateForm = (formName, model, children, activeAsset) => {
         onSubmit={(values, { setSubmitting }) => {
           setSubmitting(true);
           const operation = model.operation;
-          const backendMethod = presschain_azle_backend[operation];
-          console.log(backendMethod);
+          const backendMethod = presschain_azle_backend.registerJournalist; //[operation];
+          console.log(values);
           if (backendMethod) {
             backendMethod(values)
               .then((response) => {
@@ -60,10 +60,13 @@ const CreateForm = (formName, model, children, activeAsset) => {
               })
               .catch((error) => {
                 alert(`Operation failed: ${error.toString()}`);
+                console.log(error);
+
                 setSubmitting(false);
               });
           } else {
             alert(`Operation method ${model.operation} not found on backend.`);
+            console.log(error);
             setSubmitting(false);
           }
         }}
