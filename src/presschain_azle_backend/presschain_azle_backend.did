@@ -1,4 +1,4 @@
 service: () -> {
     greet: (text) -> (text) query;
-    registerJournalist: (text, text) -> (bool);
+    registerJournalist: (text, text) -> (text);
 }

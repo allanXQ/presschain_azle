@@ -130,6 +130,7 @@ const AboutUs = () => {
       >
         {mission.map((item, index) => (
           <Box
+            key={item.title}
             sx={{
               display: "flex",
               flexDirection: "column",
