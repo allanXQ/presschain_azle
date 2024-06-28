@@ -1,12 +1,8 @@
 import { Form, Formik } from "formik";
-
 import MUITextField from "components/forms/inputs/textField";
 import { Box } from "@mui/material";
 import getValidationSchema from "./getValidationSchema";
-import { useDispatch, useSelector } from "react-redux";
-import { apiCall } from "Redux/async/asyncThunk";
 import { MuiButton } from "components/common/Button";
-import { selectUser } from "Redux/features/user/userSlice";
 import { presschain_azle_backend } from "declarations/presschain_azle_backend";
 
 const CenteredBox = (props) => (
@@ -39,8 +35,6 @@ const getInitialValues = (fields) => {
 };
 
 const CreateForm = (formName, model, children, activeAsset) => {
-  const dispatch = useDispatch();
-  const user = useSelector(selectUser);
   const fields = model.fields;
   return (
     <CenteredBox key={activeAsset}>
@@ -49,11 +43,10 @@ const CreateForm = (formName, model, children, activeAsset) => {
         validationSchema={getValidationSchema(fields)}
         onSubmit={(values, { setSubmitting }) => {
           setSubmitting(true);
-          const operation = model.operation;
-          const backendMethod = presschain_azle_backend.registerJournalist; //[operation];
-          console.log(values);
+          const backendMethod = presschain_azle_backend[model.operation];
+          const args = model.fields.map((field) => values[field.name]);
           if (backendMethod) {
-            backendMethod(values)
+            backendMethod(...args)
               .then((response) => {
                 alert("Operation successful!");
                 setSubmitting(false);
