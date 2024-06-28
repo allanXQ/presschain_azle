@@ -1,9 +1,9 @@
 // /backend/contracts/journalist.ts
 import { update, text, bool } from "azle";
-import * as bcrypt from "bcrypt";
+
 type Journalist = {
   email: string;
-  newpassword: string;
+  password: string;
 };
 
 let journalists: Journalist[] = [];
@@ -16,8 +16,7 @@ export async function registerJournalist(
     console.error(`Journalist with email ${email} is already registered.`);
     return false;
   }
-  const newpassword = await bcrypt.hash(password, 10);
-  journalists.push({ email, newpassword });
+  journalists.push({ email, password });
   console.log(`Registered journalist with email: ${email}`);
   return true;
 }
