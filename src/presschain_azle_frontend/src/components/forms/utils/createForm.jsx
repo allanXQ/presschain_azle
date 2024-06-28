@@ -48,6 +48,13 @@ const CreateForm = (formName, model, children, activeAsset) => {
           if (backendMethod) {
             backendMethod(...args)
               .then((response) => {
+                const res = JSON.parse(response);
+                console.log(res);
+                if (res.type === "error") {
+                  alert(`Operation failed: ${res.error}`);
+                  setSubmitting(false);
+                  return;
+                }
                 alert("Operation successful!");
                 setSubmitting(false);
               })
