@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import getValidationSchema from "./getValidationSchema";
 import { MuiButton } from "components/common/Button";
 import { presschain_azle_backend } from "declarations/presschain_azle_backend";
+import { useDispatch } from "react-redux";
 
 const CenteredBox = (props) => (
   <Box
@@ -36,6 +37,8 @@ const getInitialValues = (fields) => {
 
 const CreateForm = (formName, model, children, activeAsset) => {
   const fields = model.fields;
+  const dispatch = useDispatch();
+
   return (
     <CenteredBox key={activeAsset}>
       <Formik
@@ -49,24 +52,26 @@ const CreateForm = (formName, model, children, activeAsset) => {
             backendMethod(...args)
               .then((response) => {
                 const res = JSON.parse(response);
-                console.log(res);
                 if (res.type === "error") {
-                  alert(`Operation failed: ${res.error}`);
                   setSubmitting(false);
+                  model.dispatch &&
+                    dispatch(model.dispatch.error({ error: res.message }));
                   return;
                 }
-                alert("Operation successful!");
+                model.dispatch && dispatch(model.dispatch.success(res));
                 setSubmitting(false);
               })
               .catch((error) => {
-                alert(`Operation failed: ${error.toString()}`);
                 console.log(error);
-
+                model.dispatch &&
+                  dispatch(model.dispatch.error({ error: error.message }));
                 setSubmitting(false);
               });
           } else {
             alert(`Operation method ${model.operation} not found on backend.`);
             console.log(error);
+            model.dispatch &&
+              dispatch(model.dispatch.error({ error: error.message }));
             setSubmitting(false);
           }
         }}

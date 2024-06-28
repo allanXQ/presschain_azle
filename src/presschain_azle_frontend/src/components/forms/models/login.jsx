@@ -1,9 +1,16 @@
+import {
+  loginFailed,
+  loginSuccess,
+} from "../../../redux/features/user/userSlice";
 import CreateForm from "../utils/createForm";
 
 const loginModel = {
   name: "Sign In",
-  endpoint: "auth/login",
-  method: "post",
+  operation: "loginJournalist",
+  dispatch: {
+    success: loginSuccess,
+    error: loginFailed,
+  },
 
   fields: [
     {
