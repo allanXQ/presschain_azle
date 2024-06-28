@@ -13,13 +13,13 @@ export function registerJournalist(email: text, password: text): text {
     if (existingJournalist) {
       return JSON.stringify({
         type: "error",
-        message: `Journalist with email ${email} already exists.`,
+        message: `Email already in use.`,
       });
     }
     journalists.push({ email, password });
     return JSON.stringify({
       type: "success",
-      message: `Journalist with email ${email} registered successfully.`,
+      message: `Registered successfully.`,
     });
   } catch (error) {
     return JSON.stringify({
@@ -42,7 +42,7 @@ export function loginJournalist(email: text, password: text): text {
     }
     return JSON.stringify({
       type: "success",
-      message: `Journalist with email ${email} logged in successfully.`,
+      message: `Logged in successfully.`,
     });
   } catch (error) {
     return JSON.stringify({
@@ -57,11 +57,53 @@ export function getJournalist(email: text): text {
   if (!journalist) {
     return JSON.stringify({
       type: "error",
-      message: `Journalist with email ${email} not found.`,
+      message: `User not found.`,
     });
   }
   return JSON.stringify({
     type: "success",
-    data: journalist,
+    message: `User retrieved.`,
+    payload: journalist,
   });
+}
+
+export function getJournalists(): text {
+  return JSON.stringify(journalists);
+}
+
+export function deleteJournalist(email: text): text {
+  try {
+    journalists = journalists.filter((j) => j.email !== email);
+    return JSON.stringify({
+      type: "success",
+      message: `Journalist deleted successfully.`,
+    });
+  } catch (error) {
+    return JSON.stringify({
+      type: "error",
+      message: error,
+    });
+  }
+}
+
+export function updateJournalist(email: text, password: text): text {
+  try {
+    const journalist = journalists.find((j) => j.email === email);
+    if (!journalist) {
+      return JSON.stringify({
+        type: "error",
+        message: `Journalist not found.`,
+      });
+    }
+    journalist.password = password;
+    return JSON.stringify({
+      type: "success",
+      message: `Journalist updated successfully.`,
+    });
+  } catch (error) {
+    return JSON.stringify({
+      type: "error",
+      message: error,
+    });
+  }
 }
