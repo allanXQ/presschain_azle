@@ -1,8 +1,8 @@
-# Peerchain
+# PressChain
 
 ## Description
 
-**Peerchain** is a decentralized journalist platform built on the **Internet Computer Protocol (ICP)**. It provides a secure and transparent environment where journalists can register, manage their profiles, submit articles, retrieve published articles, and engage in a peer-review process.
+**PressChain** is a decentralized journalist platform built on the **Internet Computer Protocol (ICP)**. It provides a secure and transparent environment where journalists can register, manage their profiles, submit articles, retrieve published articles, and engage in a peer-review process.
 
 ## Features
 
