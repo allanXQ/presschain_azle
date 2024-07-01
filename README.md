@@ -1,61 +1,126 @@
-# `presschain_azle`
+# Peerchain
 
-Welcome to your new `presschain_azle` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+## Description
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
+**Peerchain** is a decentralized journalist platform built on the **Internet Computer Protocol (ICP)**. It provides a secure and transparent environment where journalists can register, manage their profiles, submit articles, retrieve published articles, and engage in a peer-review process.
 
-To learn more before you start working with `presschain_azle`, see the following documentation available online:
+## Features
 
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
+### User Registration and Authentication
 
-If you want to start working on your project right away, you might want to try the following commands:
+- **Secure Sign-Up/Sign-In:** Journalists use a secure authentication process, leveraging the intrinsic security features of the Internet Computer.
+
+### Profile Management
+
+- **Customizable Profiles:** Journalists can add personal information, enhancing their public profiles for readers and peer reviewers.
+
+### Article Submission
+
+- **Decentralized Publishing:** Articles are stored immutably on the blockchain, ensuring permanence and resistance to tampering.
+
+### Article Retrieval
+
+- **Search and Access:** Enables quick access to articles based on journalist names or content keywords.
+
+### Article Review
+
+- **Peer Review System:** Allows journalists to submit articles for peer review, promoting quality and credibility in published content.
+- **Feedback and Revisions:** Journalists receive constructive feedback, which they can use to revise and improve their articles before final publication.
+
+### User Management
+
+- **Administrative Controls:** Allows for the management of journalist profiles and articles.
+
+## Benefits
+
+### Enhanced Credibility
+
+- **Peer Review:** Adds a layer of validation, increasing the credibility of the articles and the journalists who write them.
+
+### Improved Article Quality
+
+- **Constructive Feedback:** Helps journalists refine their writing, ensuring that only high-quality content is published.
+
+### Community Engagement
+
+- **Collaborative Environment:** Fosters a sense of community as journalists engage with each other’s work.
+
+### Transparency
+
+- **Visible Revisions:** Changes and feedback are tracked transparently, showcasing the development of each article.
+
+### Security and Integrity
+
+- **Immutable Storage:** Articles and reviews are stored on the Internet Computer, making the data tamper-proof and permanently accessible.
+
+### Censorship Resistance
+
+- **Freedom of Speech:** Journalists can publish without fear of suppression or editorial bias, crucial for maintaining the integrity and truthfulness of journalistic content.
+- **Resistance to External Pressure:** The platform's decentralized nature minimizes the potential for governmental or corporate interference.
+
+### Monetization Opportunities
+
+- **Direct Earnings:** Allows journalists to establish direct financial relationships with their readers, bypassing traditional advertising and subscription models dominated by major corporations.
+- **Flexible Revenue Models:** Supports various monetization strategies to suit different types of content and audience engagement.
+
+## Technical Overview
+
+### Backend
+
+The backend is built using **Azle**, a TypeScript framework for the Internet Computer which compiles to Motoko. It defines the business logic and data management handled by canisters deployed on the ICP network.
+
+### Canisters
+
+- **Journalist Canister:** Handles operations related to user management (registration, updates, deletion) and article management (submission, retrieval).
+
+### Frontend
+
+The frontend is built using **React** and **Material-UI**, providing a responsive user interface for interacting with the backend services deployed on the ICP.
+
+- **React:** Manages the UI components and user interactions.
+- **Material-UI:** Used for designing a polished material-themed user interface.
+
+## Getting Started
+
+### Prerequisites
+
+- **DFINITY Canister SDK:** Required to build and deploy canisters.
+- **Node.js:** Required to run the frontend application.
+- **NPM:** Recommended for managing JavaScript dependencies.
+
+### Installation
+
+Clone the repository:
 
 ```bash
-cd presschain_azle/
-dfx help
-dfx canister --help
+git clone https://github.com/your-repository/journalist-platform.git
+cd journalist-platform
 ```
 
-## Running the project locally
+#### Set up the Backend
 
-If you want to test your project locally, you can use the following commands:
+Navigate to the backend directory and install dependencies:
 
 ```bash
-# Starts the replica, running in the background
+cd backend
 dfx start --background
-
-# Deploys your canisters to the replica and generates your candid interface
 dfx deploy
 ```
 
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
+#### Set up the Frontend
 
-If you have made changes to your backend canister, you can generate a new candid interface with
-
-```bash
-npm run generate
-```
-
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
-
-If you are making frontend changes, you can start a development server with
+Navigate to the frontend directory and install dependencies:
 
 ```bash
-npm start
+cd ../frontend
+yarn install
+yarn start
 ```
 
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
+The frontend should now be running and accessible at `http://localhost:3000`.
 
-### Note on frontend environment variables
+### Usage
 
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
+After logging into the platform, journalists can manage their profiles, submit new articles, and view articles submitted by other journalists. Users can register new accounts through the registration page.
 
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
-
-### Issues
-
-password hashing with bcrypt doesnt work, crypto module doesnt work
+---
